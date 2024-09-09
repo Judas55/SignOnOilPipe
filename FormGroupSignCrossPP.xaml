@@ -1,0 +1,44 @@
+﻿<Window x:Name="Window1" x:Class="GlobalSign.FormGroupSignCrossPP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Знаки на подводных переходах" Height="260" Width="450" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" ResizeMode ="NoResize">
+    <Grid x:Name="Grid1" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="169*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Параметры трассы" Margin="5,0,5,0" Grid.Row="1" Height="76" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <StackPanel>
+                <Label Content="Пикет начала преграды в формате ХХ+ХХ" Margin="0,0,0,0"/>
+                <TextBox x:Name="TextBox1" Text="0+0" HorizontalAlignment="Right" Margin="0,-25,0,0" TextAlignment="Center" Width="100" Height="20"/>
+                <Label Content="Тип водной преграды" Margin="0,0,0,0"/>
+                <ComboBox x:Name="ComboBox1" Margin="0,-25,0,0" Height="20" Width="180" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Дополнительгные знаки" Margin="5,81,5,0"  Height="94" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2">
+            <StackPanel>
+
+                <CheckBox x:Name="CheckBox3"  Content="Знак: Репер" Margin="5,5,0,0" HorizontalAlignment="Left" Height="15" Width="350" IsChecked="True"/>
+                <Label Content="Расстояние от преграды до знака, м" Margin="0,0,0,0"/>
+                <TextBox x:Name="TextBox5" Text="200" HorizontalAlignment="Right" Margin="0,-25,0,0" TextAlignment="Center" Width="100" Height="20"/>
+                <Label Content="Смещение знака от оси, м" Margin="0,-3,0,0"/>
+                <TextBox x:Name="TextBox6" Text="50" HorizontalAlignment="Right" Margin="0,-25,0,0" TextAlignment="Center" Width="100" Height="20"/>
+                <TextBox x:Name="TextBox7" Text="200" HorizontalAlignment="Right" Margin="0,-25,0,0" TextAlignment="Center" Width="100" Height="20"/>
+                <TextBox x:Name="TextBox8" Text="50" HorizontalAlignment="Right" Margin="0,-25,0,0" TextAlignment="Center" Width="100" Height="20"/>
+
+
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="Button1" Content="Принять" VerticalAlignment="Top" Width="100" Height="20" Click="Button1_Click" Grid.Row="1" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Margin="108,189,0,0" HorizontalAlignment="Left" Grid.Column="1"/>
+        <Button x:Name="Button2" Content="Отмена" VerticalAlignment="Top" Height="20" Click="Button2_Click" Grid.Row="1" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Margin="228,189,0,0" HorizontalAlignment="Left" Width="100" Grid.Column="1" />
+    </Grid>
+</Window>
